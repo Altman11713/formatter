@@ -1,0 +1,60 @@
+# Formatter
+
+A small Java console application that reads text from standard input and formats it according to a chosen alignment mode and width.
+
+## Supported modes
+
+- `left`
+- `right`
+- `center`
+- `justify`
+- `hard`
+
+## How it works
+
+The program takes two command-line arguments:
+
+1. alignment mode
+2. output width
+
+Then it reads the full input text from standard input and prints the formatted result to the console.
+
+## Build
+
+Run:
+
+```bash
+mvn test
+mvn package
+```
+
+General usage:
+```bash
+java -jar target/formatter.jar <left|right|center|justify|hard> <width>
+```
+
+Example modes:
+
+Left
+```bash
+echo "This   text should    be left  aligned" | java -jar target/formatter.jar left 10
+```
+Right
+```bash
+echo "This   text should    be right  aligned" | java -jar target/formatter.jar right 10
+```
+
+Center
+```bash
+echo "This   text should    be center  aligned" | java -jar target/formatter.jar center 10
+```
+
+Justify
+```bash
+echo "This text should be justified nicely" | java -jar target/formatter.jar justify 20
+```
+
+Hard
+```bash
+echo "This   text should be hard" | java -jar target/formatter.jar hard 10
+```
